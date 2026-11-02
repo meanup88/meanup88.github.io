@@ -1,26 +1,19 @@
-@'
-document.addEventListener("DOMContentLoaded", () => {
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".navigation");
 
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(link => {
-        link.addEventListener("click", event => {
-
-            const target = document.querySelector(
-                link.getAttribute("href")
-            );
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-    });
-
+menuButton?.addEventListener("click", () => {
+  const isOpen = navigation.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
 });
-'@ | Set-Content script.js -Encoding UTF8
+
+navigation?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+    menuButton?.setAttribute("aria-label", "Open navigation");
+  });
+});
+
+const year = document.querySelector("#year");
+if (year) year.textContent = String(new Date().getFullYear());

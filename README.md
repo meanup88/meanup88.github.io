@@ -1,30 +1,25 @@
-@'
-# Anup Meshram — Portfolio
+# meanupwrites — Writer & Storyteller
 
-Personal developer portfolio for Anup Meshram.
+A responsive, editorial-style portfolio for Anup Meshram, who writes under the pen name **meanup**. The site brand is **meanupwrites**. It brings together original fiction, songwriting, digital storytelling, interactive game concepts, philosophical inquiries and professional background.
 
-## Focus
+## Run locally
 
-- Generative AI
-- LLM Applications
-- AI Automation
-- Full-Stack Development
-- React.js
-- Node.js
-- Python
-- FastAPI
-- REST APIs
-- Business Software
+Open `index.html` in a browser, or serve the directory with:
 
-## Featured Projects
+```bash
+python -m http.server 8000
+```
 
-- Sitaburdi Urban AI Banking
-- Dealership Operating System
-- DMS Showroom Management
-- Hey Bawa
-- AI Business Automation
+Then visit `http://localhost:8000`.
 
-## Website
+## Publish
 
-https://meanup88.github.io
-'@ | Set-Content README.md -Encoding UTF8
+This repository is intended for GitHub Pages at `https://meanup88.github.io`. In the repository settings, select **Settings → Pages → Deploy from a branch**, then choose `main` and `/ (root)`.
+
+## Editorial notes
+
+- `DARKSIDE: The Fourth Chair` is presented as a work in development.
+- `Skater Chiku`, `DemonKlin` and `Wild Pact` are independent concepts/prototypes, not released commercial game credits.
+- Philosophical topics are presented as inquiries, not academic credentials or peer-reviewed scientific theories.
+- Contact uses the professional email and profile links supplied for this portfolio. A personal phone number is not published.
+- Portfolio content is authored by meanup; add only work that is original or cleared for display.
